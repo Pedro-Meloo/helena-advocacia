@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Retrato demonstrativo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a2d24"/>
+      <stop offset="1" stop-color="#12100e"/>
+    </linearGradient>
+    <radialGradient id="light" cx="78%" cy="18%" r="65%">
+      <stop offset="0" stop-color="#e9b980" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#e9b980" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c79a79"/>
+      <stop offset="1" stop-color="#7d5a44"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1b14"/>
+      <stop offset="1" stop-color="#120b08"/>
+    </linearGradient>
+    <linearGradient id="blazer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2926"/>
+      <stop offset="1" stop-color="#0d0c0b"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".62" stop-color="#12100e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#12100e" stop-opacity=".85"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .07 0"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="800" height="1100" fill="url(#bg)"/>
+  <!-- estante desfocada ao fundo -->
+  <g filter="url(#soft)" opacity=".55">
+    <g fill="#6d4a30">
+      <rect x="40" y="120" width="26" height="190"/><rect x="72" y="140" width="20" height="170" fill="#4d3524"/>
+      <rect x="98" y="110" width="30" height="200" fill="#8a6540"/><rect x="134" y="150" width="22" height="160" fill="#3d2a1d"/>
+      <rect x="162" y="125" width="28" height="185"/><rect x="196" y="145" width="18" height="165" fill="#5a3f2b"/>
+      <rect x="40" y="400" width="30" height="180" fill="#4d3524"/><rect x="76" y="420" width="24" height="160"/>
+      <rect x="106" y="395" width="28" height="185" fill="#8a6540"/><rect x="140" y="430" width="20" height="150" fill="#3d2a1d"/>
+      <rect x="166" y="410" width="30" height="170" fill="#5a3f2b"/>
+    </g>
+    <rect x="30" y="312" width="200" height="8" fill="#2a1d14"/>
+    <rect x="30" y="582" width="200" height="8" fill="#2a1d14"/>
+  </g>
+  <rect width="800" height="1100" fill="url(#light)"/>
+
+  <!-- cabelo (fundo, cai atrás dos ombros) -->
+  <path d="M262 470 C240 330 320 250 405 252 C500 254 560 330 540 480 C560 620 590 740 600 860 L200 860 C210 740 270 620 262 470 Z" fill="url(#hair)"/>
+  <!-- ombros e blazer -->
+  <path d="M60 1100 C80 880 220 790 400 770 C580 790 720 880 740 1100 Z" fill="url(#blazer)"/>
+  <path d="M400 775 L330 1100 L470 1100 Z" fill="#e9e2d6" opacity=".92"/>
+  <path d="M400 775 L338 1100 M400 775 L462 1100" stroke="#12100e" stroke-width="2" opacity=".5"/>
+  <!-- pescoço -->
+  <path d="M352 640 C352 710 340 750 400 790 C460 750 448 710 448 640 Z" fill="url(#skin)"/>
+  <path d="M352 700 C380 730 420 730 448 700 L448 650 L352 650 Z" fill="#000" opacity=".22"/>
+  <!-- rosto -->
+  <ellipse cx="400" cy="480" rx="112" ry="145" fill="url(#skin)"/>
+  <!-- luz lateral no rosto -->
+  <ellipse cx="450" cy="440" rx="70" ry="120" fill="#f0c9a2" opacity=".18"/>
+  <!-- franja -->
+  <path d="M286 460 C282 350 340 300 410 300 C480 300 520 350 516 450 C490 380 440 350 380 360 C330 368 300 410 286 460 Z" fill="url(#hair)"/>
+  <!-- luz de contorno no cabelo -->
+  <path d="M520 360 C560 430 548 560 552 700" fill="none" stroke="#e9b980" stroke-width="3" opacity=".45"/>
+
+  <rect width="800" height="1100" fill="url(#fade)"/>
+  <rect width="800" height="1100" filter="url(#grain)"/>
+</svg>
